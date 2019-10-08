@@ -94,7 +94,7 @@ man.dispose();//fechar a tela da manutenção
             linha.add(objeto.getCodigo());
             linha.add(objeto.getNr_serie());
             linha.add(objeto.getPreco());
-            linha.add(objeto.getData_validade());
+            linha.add(objeto.getData_validade().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
             linha.add(objeto.getSabor());
             modelo.addRow(linha); //adicionando a linha na tabela
         }
